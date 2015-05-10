@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "JD Test",
+  "description": "京东秒杀",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs",
+    "https://*/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*.JD.*/*","https://*.jd.*/*"],
+      "js": ["page.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
