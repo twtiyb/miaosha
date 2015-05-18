@@ -6,17 +6,21 @@
   "version": "1.0",
 
   "permissions": [
+  "webRequest",
     "tabs",
-    "https://*/"
+    "https://*/",
+    "http://*/"
   ],
   "content_scripts": [
     {
-      "matches": ["http://*.JD.*/*","https://*.jd.*/*"],
-      "js": ["page.js"]
+      "matches": ["http://item.jd.com/*","http://item.jd.com/*"],
+      "js": ["js/jquery-1.11.0.min.js","js/page.js"],
+      "runat": "document_start"
+
     }
   ],
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "img/icon.png",
     "default_popup": "popup.html"
   }
 }
